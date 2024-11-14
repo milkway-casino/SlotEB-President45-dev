@@ -180,15 +180,8 @@ public class SocketIOManager : MonoBehaviour
     private void OnDisconnected(string response)
     {
         Debug.Log("Disconnected from the server");
-        //if (maxReconnectionAttempts <= this.manager.ReconnectAttempts)
-        //{
         StopAllCoroutines();
         uiManager.DisconnectionPopup(false);
-        //}
-        //else
-        //{
-        //    uiManager.DisconnectionPopup(false);
-        //}
     }
 
     private void OnError(string response)
