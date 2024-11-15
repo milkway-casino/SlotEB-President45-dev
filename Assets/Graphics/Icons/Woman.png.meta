@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d41dd7fcbfd5b49d69e5eb641b71a272
+guid: 0dcbbed74004b40cd9491dd6eb9e3a59
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,91 +134,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: mute_Normal
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 8
-        width: 86
-        height: 85
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8801f5dcddefd405ca3f8d1f387527fc
-      internalID: 1357794298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mute_Hover
-      rect:
-        serializedVersion: 2
-        x: 118
-        y: 8
-        width: 86
-        height: 85
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9bbaac4ab34fe42dbab330702d08f744
-      internalID: 1729117531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mute_Pressed
-      rect:
-        serializedVersion: 2
-        x: 229
-        y: 8
-        width: 86
-        height: 85
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f90943f07fb964f2bb33a52c143bc8a9
-      internalID: -754747102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mute_Disable
-      rect:
-        serializedVersion: 2
-        x: 340
-        y: 8
-        width: 86
-        height: 85
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65cd041a6c9be4b2c91a4a286863ec8b
-      internalID: 269596498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -229,11 +145,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      mute_Disable: 269596498
-      mute_Hover: 1729117531
-      mute_Normal: 1357794298
-      mute_Pressed: -754747102
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

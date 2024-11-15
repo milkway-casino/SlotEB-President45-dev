@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -134,7 +134,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Return_Normal
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 3150
+        width: 1033
+        height: 1025
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc13d33aac0e14410839b770806561ea
+      internalID: 811730885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Return_Hover
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 3150
+        width: 1033
+        height: 1025
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ccab05151e6e489a9412033aa12437b
+      internalID: -1408168518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Return_Disable
+      rect:
+        serializedVersion: 2
+        x: 3490
+        y: 3150
+        width: 1033
+        height: 1025
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514a190ca7f4b4c4f90a6b0919da1812
+      internalID: -515477855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Return_Pressed
+      rect:
+        serializedVersion: 2
+        x: 5240
+        y: 3150
+        width: 1033
+        height: 1025
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08a1c8d0312a414eb39446c94105b74
+      internalID: -1373423332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cross_Normal
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 1878
+        width: 1033
+        height: 1025
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58077ffd062440fdb3a38a2299f0855
+      internalID: -1368478121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cross_Hover
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 1878
+        width: 1033
+        height: 1025
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c09a0ec945e4ee6bd0a1f128c32448
+      internalID: 1036840022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cross_Disable
+      rect:
+        serializedVersion: 2
+        x: 3488
+        y: 1878
+        width: 1033
+        height: 1025
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d8a72fe73134bf39e67dc1ea221812
+      internalID: 394296064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cross_Pressed
+      rect:
+        serializedVersion: 2
+        x: 5285
+        y: 1878
+        width: 1033
+        height: 1025
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362e50b96cea34aca9ad3dfe65790dc0
+      internalID: 1210455741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +313,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cross_Disable: 394296064
+      Cross_Hover: 1036840022
+      Cross_Normal: -1368478121
+      Cross_Pressed: 1210455741
+      Return_Disable: -515477855
+      Return_Hover: -1408168518
+      Return_Normal: 811730885
+      Return_Pressed: -1373423332
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

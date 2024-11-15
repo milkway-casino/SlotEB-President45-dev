@@ -198,7 +198,6 @@ public class UIManager : MonoBehaviour
     {
         //if (Loading_Object) Loading_Object.SetActive(true);
         //StartCoroutine(LoadingRoutine());
-        SimulateClickByDefault();
     }
 
     private IEnumerator LoadingRoutine()
@@ -306,13 +305,6 @@ public class UIManager : MonoBehaviour
         if (Music_Button) Music_Button.onClick.RemoveAllListeners();
         if (Music_Button) Music_Button.onClick.AddListener(ToggleMusic);
 
-    }
-
-    private void SimulateClickByDefault()
-    {
-        Debug.Log("Awaken The Game...");
-        m_AwakeGameButton.onClick.AddListener(() => { Debug.Log("Called The Game..."); });
-        m_AwakeGameButton.onClick.Invoke();
     }
 
     internal void LowBalPopup()
