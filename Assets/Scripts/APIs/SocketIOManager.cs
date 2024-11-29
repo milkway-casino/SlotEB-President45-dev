@@ -20,6 +20,7 @@ public class SocketIOManager : MonoBehaviour
     internal UIData initUIData = null;
     internal GameData resultData = null;
     internal PlayerData playerdata = null;
+    internal List<List<int>> LineData = null;
     [SerializeField]
     internal List<string> bonusdata = null;
     //WebSocket currentSocket = null;
@@ -33,12 +34,14 @@ public class SocketIOManager : MonoBehaviour
     protected string SocketURI = null;
     //protected string TestSocketURI = "https://game-crm-rtp-backend.onrender.com/";
     //protected string TestSocketURI = "https://7p68wzhv-5000.inc1.devtunnels.ms/";
-    protected string TestSocketURI = "https://api.dingdinghouse.com/";
+    protected string TestSocketURI = "http://localhost:5000/";
+    //protected string TestSocketURI = "https://api.dingdinghouse.com/";
 
     [SerializeField]
     private string testToken;
 
-    protected string gameID = "SL-VIK";
+    //protected string gameID = "SL-PSF";
+    protected string gameID = "";
 
     internal bool isLoaded = false;
 
@@ -58,7 +61,7 @@ public class SocketIOManager : MonoBehaviour
     private void Start()
     {
         //OpenWebsocket();
-        //OpenSocket();
+        OpenSocket();
     }
 
     void ReceiveAuthToken(string jsonData)
@@ -206,7 +209,7 @@ public class SocketIOManager : MonoBehaviour
     }
     private void OnSocketAlert(string data)
     {
-        Debug.Log("Received alert with data: " + data);
+        //Debug.Log("Received alert with data: " + data);
     }
 
     private void OnSocketOtherDevice(string data)
@@ -268,10 +271,11 @@ public class SocketIOManager : MonoBehaviour
                     initUIData = myData.message.UIData;
                     playerdata = myData.message.PlayerData;
                     bonusdata = myData.message.BonusData;
+                    LineData = myData.message.GameData.linesApiData;
                     if (!SetInit)
                     {
                         Debug.Log(jsonObject);
-                        List<string> LinesString = ConvertListListIntToListString(initialData.Lines);
+                        List<string> LinesString = ConvertListListIntToListString(initialData.linesApiData);
                         List<string> InitialReels = ConvertListOfListsToStrings(initialData.Reel);
                         InitialReels = RemoveQuotes(InitialReels);
                         PopulateSlotSocket(InitialReels, LinesString);
@@ -286,7 +290,7 @@ public class SocketIOManager : MonoBehaviour
             case "ResultData":
                 {
                     Debug.Log(jsonObject);
-                    myData.message.GameData.FinalResultReel = ConvertListOfListsToStrings(myData.message.GameData.ResultReel);
+                    myData.message.GameData.FinalResultReel = ConvertListOfListsToStrings(myData.message.GameData.resultSymbols);
                     myData.message.GameData.FinalsymbolsToEmit = TransformAndRemoveRecurring(myData.message.GameData.symbolsToEmit);
                     resultData = myData.message.GameData;
                     playerdata = myData.message.PlayerData;
@@ -451,12 +455,12 @@ public class AbtLogo
 public class GameData
 {
     public List<List<string>> Reel { get; set; }
-    public List<List<int>> Lines { get; set; }
+    public List<List<int>> linesApiData { get; set; }
     public List<double> Bets { get; set; }
     public bool canSwitchLines { get; set; }
     public List<int> LinesCount { get; set; }
     public List<int> autoSpin { get; set; }
-    public List<List<string>> ResultReel { get; set; }
+    public List<List<string>> resultSymbols { get; set; }
     public List<int> linesToEmit { get; set; }
     public List<List<string>> symbolsToEmit { get; set; }
     public double WinAmout { get; set; }
@@ -473,6 +477,8 @@ public class FreeSpins
 {
     public int count { get; set; }
     public bool isNewAdded { get; set; }
+    public List<List<string>> jokerSymbols { get; set; }
+    public List<List<string>> trumpSymbols { get; set; }
 }
 
 [Serializable]
