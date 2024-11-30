@@ -10,9 +10,6 @@ public class AudioController : MonoBehaviour
     [SerializeField] internal AudioSource audioPlayer_button;
     [SerializeField] internal AudioSource audioSpin_button;
     [SerializeField] private AudioClip[] clips;
-    [SerializeField] private AudioClip[] Bonusclips;
-    [SerializeField] private AudioSource bg_audioBonus;
-    [SerializeField] private AudioSource audioPlayer_Bonus;
 
     private void Start()
     {
@@ -45,20 +42,6 @@ public class AudioController : MonoBehaviour
         }
     }
 
-    internal void SwitchBGSound(bool isbonus)
-    {
-        if(isbonus)
-        {
-            if (bg_audioBonus) bg_audioBonus.enabled = true;
-            if (bg_adudio) bg_adudio.enabled = false;
-        }
-        else
-        {
-            if (bg_audioBonus) bg_audioBonus.enabled = false;
-            if (bg_adudio) bg_adudio.enabled = true;
-        }
-    }
-
     internal void PlayWLAudio(string type)
     {
         audioPlayer_wl.loop = false;
@@ -88,28 +71,6 @@ public class AudioController : MonoBehaviour
 
     }
 
-    internal void PlayBonusAudio(string type)
-    {
-        audioPlayer_wl.loop = false;
-        int index = 0;
-        switch (type)
-        {
-            case "win":
-                index = 0;
-                break;
-            case "lose":
-                index = 1;
-                break;
-            case "cycleSpin":
-                index = 2;
-                break;
-        }
-        StopBonusAaudio();
-        audioPlayer_Bonus.clip = Bonusclips[index];
-        audioPlayer_Bonus.Play();
-
-    }
-
     internal void PlayButtonAudio()
     {
         audioPlayer_button.Play();
@@ -126,12 +87,6 @@ public class AudioController : MonoBehaviour
         audioPlayer_wl.loop = false;
     }
 
-    internal void StopBonusAaudio()
-    {
-        audioPlayer_Bonus.Stop();
-        audioPlayer_Bonus.loop = false;
-    }
-
     internal void StopBgAudio()
     {
         bg_adudio.Stop();
@@ -143,7 +98,6 @@ public class AudioController : MonoBehaviour
         {
             case "bg":
                 bg_adudio.mute = toggle;
-                bg_audioBonus.mute = toggle;
                 break;
             case "button":
                 audioPlayer_button.mute=toggle;
@@ -151,7 +105,6 @@ public class AudioController : MonoBehaviour
                 break;
             case "wl":
                 audioPlayer_wl.mute=toggle;
-                audioPlayer_Bonus.mute = toggle;
                 break;
             case "all":
                 audioPlayer_wl.mute = toggle;

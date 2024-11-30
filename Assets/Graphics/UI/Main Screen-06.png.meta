@@ -134,7 +134,427 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PopupBG
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 2675
+        width: 3361
+        height: 1706
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c99f0974baa9421c9be2f5ae5211cdb
+      internalID: 1270484759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_Button
+      rect:
+        serializedVersion: 2
+        x: 3645
+        y: 4160
+        width: 157
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b081c12f475284f3bb739c2f764fe8e4
+      internalID: 2546515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yes_Button
+      rect:
+        serializedVersion: 2
+        x: 7905
+        y: 4049
+        width: 737
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8fd19608f924a3ab1780dd12b3b1d2
+      internalID: -1194948896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yes_Hover
+      rect:
+        serializedVersion: 2
+        x: 7905
+        y: 3542
+        width: 737
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f42617aaaff4917beecd980d8ccf7d
+      internalID: 191328496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yes_Pressed
+      rect:
+        serializedVersion: 2
+        x: 7905
+        y: 3052
+        width: 737
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c03f8816bf054393b639baa35d75c67
+      internalID: -1145146820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yes_Disabled
+      rect:
+        serializedVersion: 2
+        x: 7905
+        y: 2515
+        width: 737
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4eb618cbb26046c1bd8cad368727274
+      internalID: 434535127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_Normal
+      rect:
+        serializedVersion: 2
+        x: 8900
+        y: 4049
+        width: 737
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37163082d1fa14dd1944fcc8fc63f29e
+      internalID: -1541056392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_Hover
+      rect:
+        serializedVersion: 2
+        x: 8900
+        y: 3540
+        width: 737
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f17bb31b0bdb4de29616ace64619e80
+      internalID: 1947341377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_Pressed
+      rect:
+        serializedVersion: 2
+        x: 8900
+        y: 3052
+        width: 737
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e422ad59e3bb04e14a175a72553ccddb
+      internalID: 893331529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No_Disable
+      rect:
+        serializedVersion: 2
+        x: 8900
+        y: 2514
+        width: 737
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14368ceb34fc147a7b6c45b035145fc8
+      internalID: 675710814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Normal
+      rect:
+        serializedVersion: 2
+        x: 3751
+        y: 1745
+        width: 723
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a4f33d53bc74ccdab4678dc6908b98
+      internalID: -1510841158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Hover
+      rect:
+        serializedVersion: 2
+        x: 3751
+        y: 1244
+        width: 723
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2591f637ee584790b1b40409bf319dc
+      internalID: -1017206716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Pressed
+      rect:
+        serializedVersion: 2
+        x: 3751
+        y: 745
+        width: 723
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981789079045d43bcb34b309912c3722
+      internalID: -1180316631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Disable
+      rect:
+        serializedVersion: 2
+        x: 3751
+        y: 246
+        width: 723
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2037111f31e4ed88ad07a79ee234e9
+      internalID: -1709223555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ok_Normal
+      rect:
+        serializedVersion: 2
+        x: 8588
+        y: 1721
+        width: 568
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66abd6ee76d884fb88ee66622eb6e700
+      internalID: 552088315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ok_Hover
+      rect:
+        serializedVersion: 2
+        x: 8598
+        y: 1254
+        width: 568
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba5fcbe5172a499799953c2dd4bdc69
+      internalID: -1108458994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ok_Pressed
+      rect:
+        serializedVersion: 2
+        x: 8598
+        y: 830
+        width: 568
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d0018fcaca047029a10552ae03c798
+      internalID: 1774030175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ok_Disable
+      rect:
+        serializedVersion: 2
+        x: 8598
+        y: 364
+        width: 568
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebeb0914fb72f4c0f9b0b110a34c2a10
+      internalID: -907389528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Music_Image
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 2356
+        width: 328
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf01ab811d734a829863b6b5b056280
+      internalID: -1820271561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sound_Image
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 1967
+        width: 345
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1b6fc195c55439489de26ac0953ddf
+      internalID: 749597921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +565,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Close_Disable: -1709223555
+      Close_Hover: -1017206716
+      Close_Normal: -1510841158
+      Close_Pressed: -1180316631
+      Music_Image: -1820271561
+      No_Disable: 675710814
+      No_Hover: 1947341377
+      No_Normal: -1541056392
+      No_Pressed: 893331529
+      Ok_Disable: -907389528
+      Ok_Hover: -1108458994
+      Ok_Normal: 552088315
+      Ok_Pressed: 1774030175
+      PopupBG: 1270484759
+      Quit_Button: 2546515
+      Sound_Image: 749597921
+      Yes_Button: -1194948896
+      Yes_Disabled: 434535127
+      Yes_Hover: 191328496
+      Yes_Pressed: -1145146820
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
