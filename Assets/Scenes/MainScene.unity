@@ -12171,9 +12171,9 @@ RectTransform:
   - {fileID: 1348133884}
   m_Father: {fileID: 1485219722}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -5.15, y: -469.89}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -5.15, y: 70.109985}
   m_SizeDelta: {x: 1204.23, y: 625.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1024546470
@@ -19279,9 +19279,9 @@ RectTransform:
   - {fileID: 724812883}
   m_Father: {fileID: 1485219722}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -5.15, y: -469.89}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -5.15, y: 70.109985}
   m_SizeDelta: {x: 1204.23, y: 625.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1574897784
@@ -27306,13 +27306,13 @@ MonoBehaviour:
   audioPlayer_button: {fileID: 1742219840284188182}
   audioSpin_button: {fileID: 3653419156959999269}
   clips:
-  - {fileID: 8300000, guid: 797736b99c9f443cfbe8df97ba165a08, type: 3}
-  - {fileID: 8300000, guid: cd4727b4a54c54682bd1c010320b41ef, type: 3}
-  - {fileID: 8300000, guid: 692fef4dceb8b410bbe30f4b667345dc, type: 3}
-  - {fileID: 8300000, guid: 797736b99c9f443cfbe8df97ba165a08, type: 3}
-  - {fileID: 8300000, guid: cd4727b4a54c54682bd1c010320b41ef, type: 3}
-  - {fileID: 8300000, guid: 567d42d78a31a446a86f8a75b656d45a, type: 3}
-  - {fileID: 8300000, guid: eff5c8ad9b6ff4bc9bdcc1cc88c87227, type: 3}
+  - {fileID: 8300000, guid: e92244f7569b34255a7f4bf0025cd827, type: 3}
+  - {fileID: 8300000, guid: 4080a18b5787d4bbd992405102ee55f7, type: 3}
+  - {fileID: 8300000, guid: a07b4729f6a00467c8df5bb68433f684, type: 3}
+  - {fileID: 8300000, guid: e92244f7569b34255a7f4bf0025cd827, type: 3}
+  - {fileID: 8300000, guid: a07b4729f6a00467c8df5bb68433f684, type: 3}
+  - {fileID: 8300000, guid: 60f3160bc4a8348cbb8ba17686fcdd78, type: 3}
+  - {fileID: 8300000, guid: fdeaaa47596324ad8969f66511d02bf7, type: 3}
 --- !u!82 &1099861978960025974
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27659,7 +27659,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f8d433ac12d0c4da3bba299e7b3af496, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3592bdb20ec1942e198097b88a730398, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.4
   m_Pitch: 1

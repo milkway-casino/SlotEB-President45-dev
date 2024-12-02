@@ -269,7 +269,7 @@ public class SlotBehaviour : MonoBehaviour
         {
             StartSlots(IsAutoSpin);
             yield return tweenroutine;
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
             i++;
             if (FSnum_text) FSnum_text.text = (spinchances - i).ToString();
         }
@@ -580,7 +580,7 @@ public class SlotBehaviour : MonoBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1);
             IsSpinning = false;
         }
     }
