@@ -6042,7 +6042,7 @@ MonoBehaviour:
   slotManager: {fileID: 2046803210}
   uiManager: {fileID: 377874625}
   bonusdata: []
-  testToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZDgzY2E2YTI3YmY5MDI0NDNlYjQ5NSIsInVzZXJuYW1lIjoiZWthbnNoIiwicm9sZSI6InBsYXllciIsImlhdCI6MTczMjYwMzkzMSwiZXhwIjoxNzMzMjA4NzMxfQ.knr6vn03tUOXAdcwsVD5O5Mzf3ZqswzxpPTq8_Ec3Cg
+  testToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZDgzY2E2YTI3YmY5MDI0NDNlYjQ5NSIsInVzZXJuYW1lIjoiZWthbnNoIiwicm9sZSI6InBsYXllciIsImlhdCI6MTczMzMxMDUxMCwiZXhwIjoxNzMzOTE1MzEwfQ.H2yYyszAqvx49G4FVeBTe31DTaUNlwUv5VDa7lr1NqE
 --- !u!1 &502359460
 GameObject:
   m_ObjectHideFlags: 0
@@ -11668,8 +11668,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 967, y: -421.48004}
-  m_SizeDelta: {x: 313.67004, y: 181.02002}
+  m_AnchoredPosition: {x: 858, y: -421.48}
+  m_SizeDelta: {x: 245.78, y: 138.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1002109378
 MonoBehaviour:
