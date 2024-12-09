@@ -359,7 +359,7 @@ public class SlotBehaviour : MonoBehaviour
         BetCounter = 0;
         if (TotalBet_text) TotalBet_text.text = (SocketManager.initialData.Bets[BetCounter] * Lines).ToString();
         if (TotalWin_text) TotalWin_text.text = "0.00";
-        if (Balance_text) Balance_text.text = SocketManager.playerdata.Balance.ToString("f2");
+        if (Balance_text) Balance_text.text = SocketManager.playerdata.Balance.ToString();
         currentBalance = SocketManager.playerdata.Balance;
         currentTotalBet = SocketManager.initialData.Bets[BetCounter] * Lines;
         CompareBalance();
@@ -546,7 +546,7 @@ public class SlotBehaviour : MonoBehaviour
 
         if (TotalWin_text) TotalWin_text.text = "<size=35>win</size>\n" + SocketManager.playerdata.currentWining.ToString("f2");
 
-        if (Balance_text) Balance_text.text = SocketManager.playerdata.Balance.ToString("f2");
+        if (Balance_text) Balance_text.text = SocketManager.playerdata.Balance.ToString();
 
         currentBalance = SocketManager.playerdata.Balance;
 
@@ -631,7 +631,7 @@ public class SlotBehaviour : MonoBehaviour
 
         DOTween.To(() => initAmount, (val) => initAmount = val, balance, 0.8f).OnUpdate(() =>
         {
-            if (Balance_text) Balance_text.text = initAmount.ToString("f2");
+            if (Balance_text) Balance_text.text = initAmount.ToString("f3");
         });
     }
 
