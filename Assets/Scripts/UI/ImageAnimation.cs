@@ -80,6 +80,7 @@ public class ImageAnimation : MonoBehaviour
 
     public void StartAnimation()
     {
+       
         indexOfTexture = 0;
         if (currentAnimationState == ImageState.NONE)
         {

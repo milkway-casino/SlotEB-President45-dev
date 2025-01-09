@@ -116,6 +116,8 @@ public class UIManager : MonoBehaviour
     private Button NoQuit_Button;
     [SerializeField]
     private Button CrossQuit_Button;
+    [SerializeField]
+    private Button megaWin_Disable;
 
     [SerializeField]
     private AudioController audioController;
@@ -136,6 +138,7 @@ public class UIManager : MonoBehaviour
     private bool isExit = false;
 
     private int FreeSpins;
+    private Tween megawin_Tween;
 
 
     private void Awake()
@@ -189,6 +192,9 @@ public class UIManager : MonoBehaviour
 
         if (Left_Button) Left_Button.onClick.RemoveAllListeners();
         if (Left_Button) Left_Button.onClick.AddListener(delegate { ChangePage(false); });
+
+        if (megaWin_Disable) megaWin_Disable.onClick.RemoveAllListeners();
+        if (megaWin_Disable) megaWin_Disable.onClick.AddListener(disableMegaWinOnPress);
 
         if (PaytableExit_Button) PaytableExit_Button.onClick.RemoveAllListeners();
         if (PaytableExit_Button) PaytableExit_Button.onClick.AddListener(delegate { ClosePopup(PaytablePopup_Object); });
@@ -291,6 +297,20 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    internal void FreeSpinProcess(int spins)
+    {
+        int ExtraSpins = spins;
+        FreeSpins = spins;
+        Debug.Log("ExtraSpins: " + ExtraSpins);
+        Debug.Log("Total Spins: " + spins);
+        if (FreeSpinPopup_Object) FreeSpinPopup_Object.SetActive(true);
+        if (Free_Text) Free_Text.text = ExtraSpins.ToString() + " Free spins awarded.";
+        if (MainPopup_Object) MainPopup_Object.SetActive(true);
+        DOVirtual.DelayedCall(2f, () => {
+            StartFreeSpins(spins);
+        });
+    }
+
     private void StartFreeSpins(int spins)
     {
         if (MainPopup_Object) MainPopup_Object.SetActive(false);
@@ -298,13 +318,7 @@ public class UIManager : MonoBehaviour
         slotManager.FreeSpin(spins);
     }
 
-    internal void FreeSpinProcess(int spins)
-    {
-        FreeSpins = spins;
-        if (FreeSpinPopup_Object) FreeSpinPopup_Object.SetActive(true);
-        if (Free_Text) Free_Text.text = spins.ToString();
-        if (MainPopup_Object) MainPopup_Object.SetActive(true);
-    }
+   
 
     internal void ADfunction()
     {
@@ -324,7 +338,7 @@ public class UIManager : MonoBehaviour
         {
             case 1:
                 if (BigWin_Object) BigWin_Object.SetActive(true);
-                DOVirtual.DelayedCall(4f, () =>
+                megawin_Tween = DOVirtual.DelayedCall(4f, () =>
                 {
                     if (BigWin_Object) BigWin_Object.SetActive(false);
                     if (WinPopupMain_Object) WinPopupMain_Object.SetActive(false);
@@ -334,7 +348,7 @@ public class UIManager : MonoBehaviour
                 break;
             case 2:
                 if (Megawin_Object) Megawin_Object.SetActive(true);
-                DOVirtual.DelayedCall(4f, () =>
+                megawin_Tween =  DOVirtual.DelayedCall(4f, () =>
                 {
                     if (Megawin_Object) Megawin_Object.SetActive(false);
                     if (WinPopupMain_Object) WinPopupMain_Object.SetActive(false);
@@ -345,6 +359,18 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    private void disableMegaWinOnPress()
+    {
+        Debug.Log("PressedDisable");
+        megawin_Tween?.Kill();
+        if (BigWin_Object) BigWin_Object.SetActive(false);
+        if (WinPopupMain_Object) WinPopupMain_Object.SetActive(false);
+        if (MainPopup_Object) MainPopup_Object.SetActive(false);
+        if (Megawin_Object) Megawin_Object.SetActive(false);
+        slotManager.CheckPopups = false;
+    }
+
+
     private void PopulateSymbolsPayout(Paylines paylines)
     {
         for (int i = 0; i < SymbolsText.Length; i++)
@@ -352,15 +378,15 @@ public class UIManager : MonoBehaviour
             string text = null;
             if (paylines.symbols[i].Multiplier[0][0] != 0)
             {
-                text += "5x - " + paylines.symbols[i].Multiplier[0][0];
+                text += "5x - " + paylines.symbols[i].Multiplier[0][0]+"x";
             }
             if (paylines.symbols[i].Multiplier[1][0] != 0)
             {
-                text += "\n4x - " + paylines.symbols[i].Multiplier[1][0];
+                text += "\n4x - " + paylines.symbols[i].Multiplier[1][0] + "x"; ;
             }
             if (paylines.symbols[i].Multiplier[2][0] != 0)
             {
-                text += "\n3x - " + paylines.symbols[i].Multiplier[2][0];
+                text += "\n3x - " + paylines.symbols[i].Multiplier[2][0] + "x"; ;
             }
             if (SymbolsText[i]) SymbolsText[i].text = text;
         }
@@ -370,6 +396,7 @@ public class UIManager : MonoBehaviour
             if (paylines.symbols[i].Name.ToUpper() == "FREESPIN")
             {
                 if (FreeSpin_Text) FreeSpin_Text.text = paylines.symbols[i].description.ToString();
+                Debug.Log(paylines.symbols[i].description);
             }
             if (paylines.symbols[i].Name.ToUpper() == "TRUMPFREESPIN")
             {
