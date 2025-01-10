@@ -223,7 +223,7 @@ public class SlotBehaviour : MonoBehaviour
     private void StopAutoSpin()
     {
         Debug.Log("autoSpinStop");
-        Debug.Log(IsAutoSpin);
+        
         if (AutoSpinStop_Button) AutoSpinStop_Button.gameObject.SetActive(false);       
         if (IsAutoSpin)
         {
@@ -286,7 +286,11 @@ public class SlotBehaviour : MonoBehaviour
 
     void callAutoSpinAgain()
     {
-        AutoSpin();
+        Debug.Log("callAutoSpinAgain");
+        if (AutoSpinStop_Button.gameObject.activeSelf)
+        {
+            AutoSpin();
+        }
     }
     void stopautospin()
     {
@@ -381,24 +385,29 @@ public class SlotBehaviour : MonoBehaviour
 
     private void ChangeBet(bool IncDec)
     {
-        if (audioController) audioController.PlayButtonAudio();
-        if (IncDec)
+        if (!WasAutoSpinOn)
         {
-            if (BetCounter < SocketManager.initialData.Bets.Count - 1)
+            if (audioController) audioController.PlayButtonAudio();
+            if (IncDec)
             {
                 BetCounter++;
+                if (BetCounter > SocketManager.initialData.Bets.Count - 1)
+                {
+                    BetCounter = 0;
+                }
             }
-        }
-        else
-        {
-            if (BetCounter > 0)
+            else
             {
                 BetCounter--;
+                if (BetCounter < 0)
+                {
+                    BetCounter = SocketManager.initialData.Bets.Count - 1;
+                }
             }
+            if (TotalBet_text) TotalBet_text.text = (SocketManager.initialData.Bets[BetCounter] * Lines).ToString();
+            currentTotalBet = SocketManager.initialData.Bets[BetCounter] * Lines;
+            CompareBalance();
         }
-        if (TotalBet_text) TotalBet_text.text = (SocketManager.initialData.Bets[BetCounter] * Lines).ToString();
-        currentTotalBet = SocketManager.initialData.Bets[BetCounter] * Lines;
-        CompareBalance();
     }
 
     #region InitialFunctions
@@ -566,6 +575,7 @@ public class SlotBehaviour : MonoBehaviour
 
         ToggleButtonGrp(false);
 
+        Debug.Log("turboOn "+IsTurboOn+" freeSpin "+IsFreeSpin+" isautospin "+IsAutoSpin);
         if (!IsTurboOn && !IsFreeSpin && !IsAutoSpin)
         {
             StopSpin_Button.gameObject.SetActive(true);
@@ -584,6 +594,10 @@ public class SlotBehaviour : MonoBehaviour
         SocketManager.AccumulateResult(BetCounter);
 
         yield return new WaitUntil(() => SocketManager.isResultdone);
+        if (IsAutoSpin)
+        {
+            WasAutoSpinOn = true;
+        }
 
         for (int j = 0; j < SocketManager.resultData.resultSymbols.Count; j++)
         {
@@ -1035,10 +1049,14 @@ public class SlotBehaviour : MonoBehaviour
 
     void ToggleButtonGrp(bool toggle)
     {
+        Debug.Log("toggleGroupCalled");
 
         if (SlotStart_Button) SlotStart_Button.interactable = toggle;
-        if (BetMinus_Button) BetMinus_Button.interactable = toggle;
-        if (BetPlus_Button) BetPlus_Button.interactable = toggle;
+        if (!WasAutoSpinOn)
+        {
+            if (BetMinus_Button) BetMinus_Button.interactable = toggle;
+            if (BetPlus_Button) BetPlus_Button.interactable = toggle;
+        }
         
 
     }
