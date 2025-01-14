@@ -304,7 +304,7 @@ public class SlotBehaviour : MonoBehaviour
     {
         if (!IsFreeSpin)
         {
-            if (FSnum_text) FSnum_text.text = spins.ToString();
+            if (FSnum_text) FSnum_text.text = (uiManager.localfreespin).ToString();
             if (FSBoard_Object) FSBoard_Object.SetActive(true);
             IsFreeSpin = true;
             ToggleButtonGrp(false);
@@ -327,8 +327,10 @@ public class SlotBehaviour : MonoBehaviour
             yield return tweenroutine;
             yield return new WaitForSeconds(SpinDelay);
             i++;
-            if (FSnum_text) FSnum_text.text = (spinchances - i).ToString();
+           
+           
         }
+        uiManager.localfreespin = 0;
         if (FSBoard_Object) FSBoard_Object.SetActive(false);
 
         IsFreeSpin = false;
@@ -535,6 +537,12 @@ public class SlotBehaviour : MonoBehaviour
         audioController.PlayButtonAudio();
         if (audioController) audioController.PlaySpinButtonAudio();
 
+        if (IsFreeSpin)
+        {
+            uiManager.localfreespin--;
+            if (FSnum_text) FSnum_text.text = (uiManager.localfreespin).ToString();
+        }
+
         if (!autoSpin)
         {
             if (AutoSpinRoutine != null)
@@ -610,9 +618,10 @@ public class SlotBehaviour : MonoBehaviour
             }
         }
 
+        
         if (IsTurboOn || IsFreeSpin)
         {
-
+            StopSpinToggle = true;
             yield return new WaitForSeconds(0.1f);
         }
         else
@@ -627,6 +636,7 @@ public class SlotBehaviour : MonoBehaviour
             }
             StopSpin_Button.gameObject.SetActive(false);
         }
+
         Debug.Log(StopSpinToggle);
 
         for (int i = 0; i < numberOfSlots; i++)
@@ -673,6 +683,7 @@ public class SlotBehaviour : MonoBehaviour
                 }
             }
             yield return new WaitForSeconds(6);
+            
             uiManager.FreeSpinProcess((int)SocketManager.resultData.freeSpins.count);
             if (IsAutoSpin)
             {

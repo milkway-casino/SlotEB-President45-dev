@@ -139,6 +139,7 @@ public class UIManager : MonoBehaviour
     private bool isExit = false;
 
     private int FreeSpins;
+    internal int localfreespin;
     private Tween megawin_Tween;
 
 
@@ -307,14 +308,24 @@ public class UIManager : MonoBehaviour
 
     internal void FreeSpinProcess(int spins)
     {
-        int ExtraSpins = spins;
+        Debug.Log(localfreespin);
+        int ExtraSpins = Mathf.Abs(localfreespin - spins);
         FreeSpins = spins;
-        Debug.Log("ExtraSpins: " + ExtraSpins);
+        localfreespin = spins;
+        Debug.Log("ExtraSpins: " + localfreespin);
         Debug.Log("Total Spins: " + spins);
         if (FreeSpinPopup_Object) FreeSpinPopup_Object.SetActive(true);
-        if (Free_Text) Free_Text.text = ExtraSpins.ToString() + " Free spins awarded.";
+        if (ExtraSpins == 1)
+        {
+            if (Free_Text) Free_Text.text = ExtraSpins.ToString() + " Free spin awarded.";
+        }
+        else
+        {
+            if (Free_Text) Free_Text.text = ExtraSpins.ToString() + " Free spins awarded.";
+        }
         if (MainPopup_Object) MainPopup_Object.SetActive(true);
         DOVirtual.DelayedCall(2f, () => {
+           
             StartFreeSpins(spins);
         });
     }
