@@ -6163,7 +6163,7 @@ MonoBehaviour:
   slotManager: {fileID: 2046803210}
   uiManager: {fileID: 377874625}
   bonusdata: []
-  testToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3N2JhM2QzOTgxYmU0MzlkMjkyYzgzYSIsInVzZXJuYW1lIjoiTWVldCIsInJvbGUiOiJwbGF5ZXIiLCJpYXQiOjE3MzY4NDU0ODIsImV4cCI6MTczNzQ1MDI4Mn0.YxpsVZRrL1U61Dr48Bbv-1Rijs_i4n1oEGobs_NZwJw
+  testToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3N2JhM2QzOTgxYmU0MzlkMjkyYzgzYSIsInVzZXJuYW1lIjoiTWVldCIsInJvbGUiOiJwbGF5ZXIiLCJpYXQiOjE3MzcwODU1NjgsImV4cCI6MTczNzY5MDM2OH0.LlFNlsjmnf5aa13reWCOb-fbTdxf_C2_l4ZMhS_OEns
 --- !u!1 &502359460
 GameObject:
   m_ObjectHideFlags: 0
@@ -13299,7 +13299,7 @@ MonoBehaviour:
   useSharedMaterial: 1
   doLoopAnimation: 1
   currentAnimationState: 0
-  AnimationSpeed: 10
+  AnimationSpeed: 25
   delayBetweenLoop: 0
   StartOnAwake: 0
 --- !u!1 &1067827185

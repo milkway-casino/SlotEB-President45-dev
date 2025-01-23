@@ -446,6 +446,7 @@ public class SlotBehaviour : MonoBehaviour
     //function to populate animation sprites accordingly
     private void PopulateAnimationSprites(ImageAnimation animScript, int val)
     {
+        Debug.Log(animScript);
         animScript.textureArray.Clear();
         animScript.textureArray.TrimExcess();
         switch (val)
