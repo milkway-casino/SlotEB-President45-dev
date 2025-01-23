@@ -443,6 +443,7 @@ public class UIManager : MonoBehaviour
 
     private void ToggleMusic()
     {
+        if (audioController) audioController.PlayButtonAudio();
         isMusic = !isMusic;
         if (isMusic)
         {
@@ -460,6 +461,7 @@ public class UIManager : MonoBehaviour
 
     private void ToggleSound()
     {
+        if (audioController) audioController.PlayButtonAudio();
         isSound = !isSound;
         if (isSound)
         {
