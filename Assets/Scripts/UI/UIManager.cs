@@ -461,6 +461,7 @@ public class UIManager : MonoBehaviour
 
     private void ToggleSound()
     {
+        Debug.Log("playingSound");
         if (audioController) audioController.PlayButtonAudio();
         isSound = !isSound;
         if (isSound)
